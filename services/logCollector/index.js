@@ -1,9 +1,10 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var express = require("express");
-var index_1 = require("../../utils/logger/src/index");
+var index_1 = require("./utils/logger/src/index");
 var app = express();
 var port = process.env.PORT ? parseInt(process.env.PORT) : 3001;
+var appId = process.env.APPID ? parseInt(process.env.APPID) : 1111;
 app.use(express.json());
 app.get('/', function (req, res) {
     res.send('LogCollector is running Successfully');
@@ -20,5 +21,5 @@ app.post('/ingest', function (req, res) {
     }
 });
 app.listen(port, function () {
-    console.log("\u26A1\uFE0F[server]: LogCollector is running at http://localhost:".concat(port));
+    console.log("\u26A1\uFE0F[server]: LogCollector is running at PORT".concat(port, " and APPID: ").concat(appId));
 });

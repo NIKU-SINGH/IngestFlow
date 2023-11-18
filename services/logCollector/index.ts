@@ -1,6 +1,6 @@
 import * as express from 'express';
 import { Request, Response } from 'express';
-import logger from '../../utils/logger/src/index'
+import logger from './utils/logger/src/index'
 
 const app = express();
 const port: number = process.env.PORT ? parseInt(process.env.PORT) : 3001;
@@ -24,5 +24,5 @@ app.post('/ingest', (req: Request, res: Response) => {
 });
 
 app.listen(port, () => {
-    console.log(`⚡️[server]: LogCollector is running at PORT${port} and APPID: ${appId}`);
+    console.log(`⚡️[server]: LogCollector is running at PORT:${port} and APPID: ${appId}`);
 });
