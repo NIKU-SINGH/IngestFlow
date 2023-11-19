@@ -77,7 +77,7 @@ The logs should be ingested (in the log ingestor) over HTTP, on port `3000`.
 
 ## 🏛️ Proposed Architecture
 
-![Alt text](image-1.png)
+![Alt text](image.png)
 
 - After spending a considerable amount of time in the researh I found the above arhitecture to be suitable for handling more than 1 Million + users.
 
