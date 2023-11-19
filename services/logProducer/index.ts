@@ -24,7 +24,7 @@ app.get("/", (req: Request, res: Response) => {
   );
 });
 
-app.post("/ingest", async (req: Request, res: Response) => {
+app.post("/", async (req: Request, res: Response) => {
   try {
     const requestBody: LogData = req.body;
     logger.info(`Logs received are: ${JSON.stringify(requestBody)}`);
