@@ -3,14 +3,15 @@ import LogData from "./types/types";
 
 const redpanda = new Kafka({
   brokers: ["localhost:19092"],
+  
 });
 const producer = redpanda.producer();
 export async function getConnection() {
   try {
     await producer.connect();
-    return async (message: LogData) => {
+    return async (message: LogData, topic:string) => {
       await producer.send({
-        topic: "chat-room",
+        topic,
         messages: [{ value: JSON.stringify({ message }) }],
       });
     };

@@ -8,9 +8,11 @@ export async function createTopic(
   partitions?: number,
   replicas?: number
 ) {
+  console.log("Connecting to Admin ....")
   await admin.connect();
   const existingTopics = await admin.listTopics();
   if (!existingTopics.includes(topic)) {
+    console.log("Creating topic ....")
     await admin.createTopics({
       topics: [
         {

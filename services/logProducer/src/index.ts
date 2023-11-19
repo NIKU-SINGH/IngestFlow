@@ -19,10 +19,10 @@ app.post('/ingest', async (req: Request, res: Response) => {
         const requestBody: LogData = req.body;
         logger.info(`Logs received are: ${JSON.stringify(requestBody)}`);
         await sendLogToProducer(requestBody);
-        res.status(200).send("Log data received successfully");
+        res.status(200).send(`Log data received successfully`);
     } catch (error) {
         logger.error(`Error logging request body: ${error.stack}`);
-        res.status(500).send("Internal Server Error");
+        res.status(500).send(`Internal Server Error: ${error}`);
     }
 });
 
