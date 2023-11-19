@@ -1,8 +1,8 @@
 import express, { Express, Request, Response } from 'express';
-import dotenv from 'dotenv';
+// import dotenv from 'dotenv';
 import logger from '../utils/logger/src/index';
 
-dotenv.config();
+// dotenv.config();
 
 const app: Express = express();
 const port = process.env.PORT || 3000;
