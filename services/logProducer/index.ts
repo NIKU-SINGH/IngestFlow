@@ -24,19 +24,19 @@ app.get("/", (req: Request, res: Response) => {
   );
 });
 
-app.post("/", async (req: Request, res: Response) => {
-  try {
-    const requestBody: LogData = req.body;
-    logger.info(`Logs received are: ${JSON.stringify(requestBody)}`);
+// app.post("/", async (req: Request, res: Response) => {
+//   try {
+//     const requestBody: LogData = req.body;
+//     logger.info(`Logs received are: ${JSON.stringify(requestBody)}`);
 
-    await Admin.createTopic(topic, partitions, replicas);
-    await sendLogToProducer(requestBody);
-    res.status(200).send(`Log data received successfully`);
-  } catch (error) {
-    logger.error(`Error logging request body: ${error.stack}`);
-    res.status(500).send(`Internal Server Error: ${error}`);
-  }
-});
+//     await Admin.createTopic(topic, partitions, replicas);
+//     await sendLogToProducer(requestBody);
+//     res.status(200).send(`Log data received successfully`);
+//   } catch (error) {
+//     logger.error(`Error logging request body: ${error.stack}`);
+//     res.status(500).send(`Internal Server Error: ${error}`);
+//   }
+// });
 
 app.listen(port, () => {
   console.log(

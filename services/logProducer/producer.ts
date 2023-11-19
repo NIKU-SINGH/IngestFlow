@@ -2,7 +2,7 @@ import { Kafka } from "kafkajs";
 import LogData from "./types/types";
 
 const redpanda = new Kafka({
-  brokers: ["redpanda-0:9092"],
+  brokers: ["redpanda-0:9092","redpanda-1:9092","redpanda-2:9092"],
 });
 
 const producer = redpanda.producer();
