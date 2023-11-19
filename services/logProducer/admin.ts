@@ -1,6 +1,6 @@
 import { Kafka } from "kafkajs";
 const redpanda = new Kafka({
-  brokers: ["localhost:19092"],
+  brokers: ["redpanda-0:9092"],
 });
 const admin = redpanda.admin();
 export async function createTopic(
