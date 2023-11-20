@@ -6,7 +6,7 @@
 
 ## IngestFlow
 
-![Alt text](bannner.png)
+![Alt text](./assets/bannner.png)
 
 - Scalable & Fault-Tolerant Log Ingestion with IngestFlow: Harness Redpanda's Speed and Elasticsearch's Robust Search for Effortless Log Management
 
@@ -84,9 +84,9 @@ https://www.loom.com/share/cd05ff3e9dbe4963afdff4dc5de35f0a
 
 ## 🏛️ Proposed Architecture
 
-![Alt text](image-2.png)
+![Alt text](./assets/image-2.png)
 
-![Alt text](image-3.png)
+![Alt text](./assets/image-3.png)
 
 ## 💻 Technologies Used
 
