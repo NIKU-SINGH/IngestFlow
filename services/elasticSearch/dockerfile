@@ -1,0 +1,16 @@
+FROM docker.elastic.co/elasticsearch/elasticsearch:7.15.1
+
+# Optional: Add any additional configurations or plugins here
+# For instance, to install a plugin:
+# RUN elasticsearch-plugin install <plugin_name>
+
+# Expose ports (if necessary)
+EXPOSE 9200
+EXPOSE 9300
+
+# Default Elasticsearch configuration settings
+# (You can mount custom configurations if needed)
+# COPY elasticsearch.yml /usr/share/elasticsearch/config/elasticsearch.yml
+
+# Run Elasticsearch
+CMD ["elasticsearch"]

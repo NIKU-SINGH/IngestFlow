@@ -1,15 +1,19 @@
 # Dyte Assignment
 
-Log Ingestor and Query Interface
-
 <div style="text-align:center">
-  <img src="https://bookface-images.s3.amazonaws.com/logos/7e69eded1f41ba6345f75227e93c32d796e51060.png" alt="Dyte logo" />
+  <img src="https://dyte.io/blog/content/images/2021/09/Dyte-Logo.svg" alt="Dyte logo" />
 </div>
+
+## IngestFlow
+
+![Alt text](bannner.png)
+
+- Scalable & Fault-Tolerant Log Ingestion with IngestFlow: Harness Redpanda's Speed and Elasticsearch's Robust Search for Effortless Log Management
 
 ## Contents
 1. [Introduction](#-introduction)
-3. [Problem Statement](#-problem-statement)
-. [Requirements](#-requirements)
+2. [Problem Statement](#-problem-statement)
+3. [Requirements](#-requirements)
 4. [Features Implemented](#-features-implemented)
 5. [Demo Video](#-demo-video)
 7. [Solution Architecture](#-solution-architecture)
@@ -65,21 +69,24 @@ The logs should be ingested (in the log ingestor) over HTTP, on port `3000`.
 
 - [x] Log Ingestor
 - [x] Ability to send http response
-- [x] Added Kafka, Logstash , elasticsearch
-- [x] Highly scalable and fault tolerant
-- [x] 
-- [] Query Interface
+- [x] Loadbalancing 
+- [x] Redpanda and Kafka support
+- [x] Logstash integration
+- [x] Elasticsearch support
+- [x] PostgreSQL support
+- [x] Query Interface
 
 ## 📹 Demo Video
 
+https://www.loom.com/share/cd05ff3e9dbe4963afdff4dc5de35f0a
 
 # 💡 Solution Proposed
 
 ## 🏛️ Proposed Architecture
 
-![Alt text](image.png)
+![Alt text](image-2.png)
 
-- After spending a considerable amount of time in the researh I found the above arhitecture to be suitable for handling more than 1 Million + users.
+![Alt text](image-3.png)
 
 ## 💻 Technologies Used
 
@@ -128,8 +135,53 @@ For testing a Node.js application to assess its performance and scalability some
 
 ## 🔄 How it can be Improved Further
 
+## ⚒️ Usage
+
+### Forking the Repository
+
+To get started with this project, fork the repository by clicking on the "Fork" button in the upper right corner of the page.
+
+### Local Installation
+
+1. Clone the forked repository to your local machine.
+
+    ```bash
+    git clone https://github.com/dyte-submissions/november-2023-hiring-NIKU-SINGH.git
+    ```
+
+2. Navigate to the project directory.
+
+    ```bash
+    cd november-2023-hiring-NIKU-SINGH
+    ```
+
+3. Install dependencies.
+
+    ```bash
+    npm install
+    ```
+
+### Docker Installation
+
+1. Ensure Docker is installed on your system. If not, download and install it from [Docker's official website](https://www.docker.com/get-started).
+
+2. Run the Docker Container
+
+    ```bash
+    docker compose up --build
+    ```
 
 
+
+### Sending Requests with cURL
+
+Once the project is running either locally or using Docker, you can interact with the endpoint using cURL commands.
+
+#### Example: Sending a GET request to the endpoint to check health status
+
+```bash
+curl -X POST -H "Content-Type: application/json" -d '{"name": "Niku", "message": "Your app is lovely please Star and Fork it"}' http://localhost:3000
+```
 
 
 <!-- ## 📝 Commit Histories -->
@@ -137,6 +189,6 @@ For testing a Node.js application to assess its performance and scalability some
 ## 📖 References Used
 
 
-<!-- ## 🙏 Note of Thanks -->
+## 🙏 Note of Thanks
 
 
