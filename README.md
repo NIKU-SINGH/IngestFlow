@@ -1,9 +1,3 @@
-# Dyte Assignment
-
-<div style="text-align:center">
-  <img src="https://dyte.io/blog/content/images/2021/09/Dyte-Logo.svg" alt="Dyte logo" />
-</div>
-
 ## IngestFlow
 
 ![Alt text](./assets/bannner.png)
