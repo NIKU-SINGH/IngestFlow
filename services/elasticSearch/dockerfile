@@ -10,7 +10,7 @@ EXPOSE 9300
 
 # Default Elasticsearch configuration settings
 # (You can mount custom configurations if needed)
-# COPY elasticsearch.yml /usr/share/elasticsearch/config/elasticsearch.yml
+COPY elasticsearch.yml /usr/share/elasticsearch/config/elasticsearch.yml
 
 # Run Elasticsearch
 CMD ["elasticsearch"]

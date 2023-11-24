@@ -24,7 +24,7 @@ export async function Consumer() {
             console.error("Error parsing message:", error);
           }
         } else {
-          console.warn("Message has no value");
+          console.warn("Message has no value"); 
         }
       },
     });
