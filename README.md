@@ -73,6 +73,9 @@ The logs should be ingested (in the log ingestor) over HTTP, on port `3000`.
 ## 📹 Demo Video
 
 https://www.loom.com/share/cd05ff3e9dbe4963afdff4dc5de35f0a
+IngestFlow : Log Ingestor and Query Tool - Watch Video
+
+
 
 # 💡 Solution Proposed
 
